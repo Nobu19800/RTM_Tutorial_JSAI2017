@@ -1,0 +1,54 @@
+# RobotController CMake config file
+#
+# This file sets the following variables:
+# RobotController_FOUND - Always TRUE.
+# RobotController_INCLUDE_DIRS - Directories containing the RobotController include files.
+# RobotController_IDL_DIRS - Directories containing the RobotController IDL files.
+# RobotController_LIBRARIES - Libraries needed to use RobotController.
+# RobotController_DEFINITIONS - Compiler flags for RobotController.
+# RobotController_VERSION - The version of RobotController found.
+# RobotController_VERSION_MAJOR - The major version of RobotController found.
+# RobotController_VERSION_MINOR - The minor version of RobotController found.
+# RobotController_VERSION_REVISION - The revision version of RobotController found.
+# RobotController_VERSION_CANDIDATE - The candidate version of RobotController found.
+
+message(STATUS "Found RobotController-@PROJECT_VERSION@")
+set(RobotController_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(RobotController_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(RobotController_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(RobotController_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(RobotController_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(RobotController_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(RobotController_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(RobotController_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(RobotController_VERSION @PROJECT_VERSION@)
+set(RobotController_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(RobotController_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(RobotController_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(RobotController_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+
