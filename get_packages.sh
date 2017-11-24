@@ -2,6 +2,10 @@
 
 set -ue
 
+if [ ! -e packages ]; then
+  mkdir -p packages
+fi
+
 function get_chainer()
 {
   wget https://github.com/chainer/chainer/archive/v$1.zip -O packages/chainer-v$1.zip
@@ -44,28 +48,17 @@ function get_doxygen()
   return
 }
 
-if [ ! -e packages ]; then
-  mkdir -p packages
-fi
-
-
 get_chainer 3.0.0
 get_chainer 2.1.0
-
 get_opencv 3.3.1
 get_opencv 2.4.13.3
-
 get_openrtm 1.1.2-RELEASE_x86
 get_openrtm 1.1.2-RELEASE_x86_64
-
 get_python 2.7.10
 get_python 2.7.10.amd64
-
 get_pyyaml 3.11.wim32-py2.7
 get_pyyaml 3.11.wim-amd64-py2.7
-
 get_cmake 3.5.2-win32-x86
-
 get_doxygen 1.8.11
 
 exit 0

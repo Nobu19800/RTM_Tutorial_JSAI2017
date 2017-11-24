@@ -4,15 +4,15 @@ set -ue
 
 sudo apt-get install wkhtmltopdf
 
+if [ ! -e web ]; then
+  mkdir -p web
+fi
+
 function get()
 {
   wkhtmltopdf $1 $2
   return
 }
-
-if [ ! -e web ]; then
-  mkdir -p web
-fi
 
 get http://openrtm.org/openrtm/ja/node/6386 web/tutorial-2-win.pdf
 get http://openrtm.org/openrtm/ja/node/6387 web/tutorial-2-linux.pdf

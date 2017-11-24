@@ -6,10 +6,9 @@ if [ ! -e sample ]; then
   mkdir -p sample
 fi
 
-
 function get()
 {
-  git clone $1 sample/`basename $1`
+  git clone --depth 1 $1 sample/`basename $1`
   rm -rf sample/`basename $1`/.git
   return
 }
