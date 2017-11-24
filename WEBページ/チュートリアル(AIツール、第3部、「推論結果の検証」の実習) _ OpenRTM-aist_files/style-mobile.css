@@ -1,0 +1,163 @@
+.switcher { display:none; }
+@media (max-width: 1250px) {
+	body { min-width:320px; }
+	.switcher { display:inline-block; }
+	#flexslider-1 .flex-control-thumbs {
+		width:900px;
+		margin:0 0 0 -450px;
+	}
+	.border-1:after { right:310px; }
+	.header-section-1 .col1, .header-section-1 .col2 { float:none; }
+	#block-superfish-1 { float:left; }
+	#superfish-1 > li > a { padding:10px 15px; }
+	#superfish-1 > li ul { top:40px; }
+	#block-search-form {
+		padding:0;
+		margin:0;
+	}
+	#flexslider-1 .flex-caption {
+		margin:-50px 0 0 -470px;
+		min-width:450px;
+	}
+	#flexslider-1 .flex-caption h2 {
+		font-size:30px;
+		line-height:35px;
+	}
+	#flexslider-1 .flex-caption h2 a { padding:20px 10px 15px 15px; }
+	#flexslider-1 .flex-caption .slide-body { padding:10px 15px; }
+	#block-tm-follow-site .tm-follow-links .tm-follow-link-wrapper {
+		margin-left:15px;
+		font-size:25px;
+		line-height:25px;
+	}
+}
+@media (max-width: 995px) {
+	.page-page-404 .panel-col-first { font-size:160px; }
+	.stickup {
+		box-shadow:none !important;
+		position:static !important;
+	}
+	.pseudoStickyBlock {
+		display:none !important;
+		height:0 !important;
+	}
+	#backtotop { display:none !important; }
+	#flexslider-1 .flex-control-thumbs {
+		width:750px;
+		margin:0 0 0 -375px;
+	}
+	#flexslider-1 .flex-caption { margin:-50px 0 0 -375px; }
+	.indent-3 { padding:0; }
+	.border-1:after { right:250px; }
+	#block-views-banners-block .view-content {
+		display:block;
+		width:100%;
+	}
+	#block-views-banners-block .view-content:after { display:block; }
+	#block-views-banners-block .views-row {
+		display:block;
+		margin-bottom:10px;
+		float:left;
+		width:33%;
+	}
+}
+@media (max-width: 767px) {
+	#superfish-1 { display:none; }
+	.select-menu {
+		display:block !important;
+		width:100%;
+	}
+	.comment-wrapper { overflow:visible; }
+	.user-picture { margin-bottom:12px; }
+	.views-field-field-portfolio-image { pointer-events:none; }
+	.panel-2col .panel-col-first, .panel-2col .panel-col-last {
+		float:none;
+		width:100%;
+	}
+	.panel-2col .panel-col-first .inside, .panel-2col .panel-col-last .inside { margin:0; }
+	.page-page-404 .panel-col-first {
+		font-size:170px;
+		line-height:170px;
+		text-align:center;
+	}
+	.filter-help {
+		float:none;
+		margin-bottom:15px;
+		padding-top:0;
+	}
+	.mobile-two-column .views-row {
+		float:left !important;
+		width:46% !important;
+		margin-right:4% !important;
+	}
+	.mobile-two-column .views-row.even { margin-right:0 !important; }
+	.mobile-two-column .views-row.odd { clear:left; }
+	#flexslider-1 .flex-caption {
+		position:static;
+		width:auto;
+		margin:0;
+		left:0;
+		padding:20px 10px 0;
+		min-width:0;
+	}
+	#flexslider-1 .flex-control-thumbs { display:none; }
+	#block-search-form, #block-superfish-1 {
+		float:none;
+		padding:0 0 20px;
+	}
+	#search-block-form input.form-text, [id^="search-block-form"] input.form-text { width:100%; }
+	#search-block-form .container-inline, [id^="search-block-form"] .container-inline { border-color:#dc6226; }
+	.border-1:after { display:none; }
+	.img-style img { width:100%; }
+	.gmap #gmap1 { height:240px; }
+	#block-views-testimonials-block .testi-content { padding:30px 25px 25px 45px; }
+	#flexslider-1 .flex-caption h2 {
+		font-size:20px;
+		line-height:25px;
+	}
+	#flexslider-1 .flex-caption h2 a { padding:15px 10px 10px 15px; }
+	#flexslider-1 .flex-caption .slide-body { padding:10px 10px; }
+	#block-views-article-block .views-field-field-article-media {
+		max-width:none;
+		margin:0 0 20px;
+		float:none;
+		width:auto;
+	}
+}
+@media (max-width: 479px) {
+	.node-teaser .field-type-file, .node-teaser .field-type-image, .node-employee .field-type-image {
+		float:none;
+		margin:0 0 20px;
+		max-width:inherit;
+		width:auto;
+	}
+	#comments .comment .comment-wrapper { overflow:visible; }
+	#comments .indented { margin-left:0; }
+	.page-tracker #main-wrapper .content { overflow-x:scroll; }
+	.page-tracker #main-wrapper .content table.sticky-header { display:none !important; }
+	.page-forum #forum { overflow-x:scroll; }
+	.page-forum #forum td.forum .icon {
+		float:none;
+		margin:0 0 5px;
+	}
+	.field-name-field-testi-image {
+		float:none;
+		margin:0 0 20px;
+		max-width:inherit;
+	}
+	.mobile-two-column .views-row {
+		float:none;
+		width:100% !important;
+		margin-right:0 !important;
+	}
+	#block-views-testimonials-block .testi-content .testi-photo {
+		float:none;
+		margin:0 0 20px;
+	}
+	.img-left {
+		float:none;
+		max-width:none;
+		margin:0 0 20px;
+	}
+	#block-views-banners-block .views-row { width:50%; }
+}
