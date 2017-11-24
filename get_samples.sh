@@ -2,11 +2,20 @@
 
 set -ue
 
-if [ ! -e samples ]; then
-  mkdir -p samples
+if [ ! -e sample ]; then
+  mkdir -p sample
 fi
 
-git clone https://github.com/takahasi/ImageDataCollector.git samples/ImageDataCollector
-git clone https://github.com/tonboAkinori/NameToVelocity.git samples/NameToVelocity
+
+function get()
+{
+  git clone $1 sample/`basename $1`
+  rm -rf sample/`basename $1`/.git
+  return
+}
+
+get https://github.com/takahasi/ImageToObjectPrediction
+get https://github.com/takahasi/ImageDataCollector
+get https://github.com/tonboAkinori/NameToVelocity
 
 exit 0
