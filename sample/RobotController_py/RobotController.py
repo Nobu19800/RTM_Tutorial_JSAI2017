@@ -76,6 +76,9 @@ class RobotController(OpenRTM_aist.DataFlowComponentBase):
 	def __init__(self, manager):
 		OpenRTM_aist.DataFlowComponentBase.__init__(self, manager)
 
+		#in_arg = [None] * ((len(RTC._d_TimedShortSeq) - 4) / 2)
+		#self._d_in = RTC.TimedShortSeq(*in_arg)
+		
 		self._d_in = RTC.TimedShortSeq(RTC.Time(0,0),[])
 		"""
 		距離センサのデータを入力
@@ -83,6 +86,10 @@ class RobotController(OpenRTM_aist.DataFlowComponentBase):
 		 - Number: 4
 		"""
 		self._inIn = OpenRTM_aist.InPort("in", self._d_in)
+		
+		#out_arg = [None] * ((len(RTC._d_TimedVelocity2D) - 4) / 2)
+		#self._d_out = RTC.TimedVelocity2D(*out_arg)
+		
 		self._d_out = RTC.TimedVelocity2D(RTC.Time(0,0),RTC.Velocity2D(0.0,0.0,0.0))
 		"""
 		目標速度出力
