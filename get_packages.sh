@@ -14,7 +14,7 @@ function get_chainer()
 
 function get_opencv()
 {
-  wget https://github.com/opencv/opencv/releases/download/$1/opencv-$1-vc14.exe -O packages/opemcv-$1-vc14.exe
+  wget https://github.com/opencv/opencv/releases/download/$1/opencv-$1-vc14.exe -O packages/opencv-$1-vc14.exe
   return
 }
 
